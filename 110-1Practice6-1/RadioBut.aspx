@@ -10,11 +10,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
-                <asp:RadioButton ID="RadioButton1" runat="server" GroupName="fruit" value="tomato" Text="tomato"  Checked="True" />
-                <br />
-                <asp:RadioButton ID="RadioButton2" runat="server" GroupName="fruit" value="durian" Text="durian" />
-                <br />
-                <asp:Button ID="Button1" runat="server" Text="Button" PostBackUrl="~/RadioButCom.aspx" />
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True">
+                <asp:ListItem>紅茶</asp:ListItem>
+                <asp:ListItem>綠茶</asp:ListItem>
+                <asp:ListItem>奶茶</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:Button ID="Button1" runat="server" Text="確定" OnClick="Button1_Click" />
+            <br/>
+
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+
+            <asp:RadioButtonList ID="RadioButtonList2" runat="server">
+                <asp:ListItem>仙草凍奶茶</asp:ListItem>
+                <asp:ListItem>椰果奶茶</asp:ListItem>
+                <asp:ListItem>布丁奶茶</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:Button ID="Button2" runat="server" Text="確定" PostBackUrl="RadioButCom.aspx" />
         </div>
     </form>
 </body>

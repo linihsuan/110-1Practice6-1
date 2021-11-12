@@ -11,14 +11,7 @@ namespace _110_1Practice6_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Form.Get("fruit") == "tomato")
-            {
-                Response.Write("番茄");
-            }
-            else
-            {
-                Response.Write("榴槤");
-            }
+            Label1.Text = Request.Form.Get("RadioButtonList2");
         }
     }
 }

@@ -13,5 +13,10 @@ namespace _110_1Practice6_1
         {
 
         }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String temp = RadioButtonList1.SelectedValue;
+            Label1.Text = temp;
+        }
     }
 }
