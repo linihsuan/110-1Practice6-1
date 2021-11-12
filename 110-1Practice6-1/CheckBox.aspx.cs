@@ -9,14 +9,18 @@ namespace _110_1Practice6_1 {
     public partial class CheckBox : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) 
         {
-            if (RadioButton1.Checked == true)
+           
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String temp = "";
+            for (int i = 0; i < CheckBoxList1.Items.Count; i++)
             {
-                Response.Write(CheckBox1.Text);
+                if (CheckBoxList1.Items[i].Selected)
+                    temp += CheckBoxList1.Items[i].Value + "\n";
             }
-            else
-            {
-                Response.Write(CheckBox2.Text);
-            }
+            TextBox1.Text = temp;
         }
     }
 }
